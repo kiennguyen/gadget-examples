@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ * Nguyen Anh Kien
+ * nguyenanhkien2a@gmail.com
+-->
+<Module>
+<ModulePrefs title="Custome Minimessage Demo" height="140" scrolling="true">
+<Require feature="minimessage"/>
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+
+<style type="text/css">
+.mmlib_table {
+  width: 100%;
+  font: bold 9px arial,sans-serif;
+  background-color: #000066;
+  color: #ffffff;
+  border-collapse: separate;
+  border-spacing: 0px;
+  padding: 1px 0px;
+  }
+.mmlib_xlink {
+  font: normal 1.1em arial,sans-serif;
+  font-weight: bold;
+  color: #0000cc;
+  cursor: pointer;
+  }
+</style>
+
+<div>
+  <h3>I'm on top now!</h3>
+</div>
+
+
+<div id="messageBox"></div>
+
+<script type="text/javascript"> 
+  // In the constructor, state that messages should be be displayed
+  // in the messageBox <div> rather than at the top of the gadget.
+  var msg = new gadgets.MiniMessage(__MODULE_ID__, document.getElementById("messageBox"));
+  msg.createDismissibleMessage("I'm the first message.");
+  msg.createDismissibleMessage("I'm the second message.");
+  msg.createDismissibleMessage("I'm at the bottom.");
+
+</script>
+]]>
+</Content>
+</Module>

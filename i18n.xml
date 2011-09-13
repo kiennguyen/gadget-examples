@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ * Nguyen Anh Kien
+ * nguyenanhkien2a@gmail.com
+-->
+<Module>
+  <ModulePrefs title="I18N Demo">
+    <Require feature="opensocial-i18n"/>
+  </ModulePrefs>
+  <Content type="html">
+  <![CDATA[
+    <script type="text/javascript">
+    function format(form) {
+      var number = form.inputbox.value;
+      var content = document.getElementById("content_div");
+      content.innerHTML = gadgets.i18n.formatNumber("#,###", number);
+    }
+    </script>
+    <FORM NAME="myform" ACTION="" METHOD="GET">Number to format: <BR><BR>
+      <INPUT TYPE="text" NAME="inputbox" VALUE=""><BR><BR>
+      <INPUT TYPE="button" NAME="button" Value="Format Number" onClick="format(this.form)">
+    </FORM>
+
+    <div id="content_div"></div>
+  ]]>
+  </Content>
+</Module>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Nguyen Anh Kien
+ * nguyenanhkien2a@gmail.com
+-->
+<Module>
+<ModulePrefs title="Hello World"
+             height="250">
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+<script>
+function doTrick(trick) {
+  var url = "http://doc.examples.googlepages.com/Trevor-"+trick+".swf";
+  outputbox = document.getElementById("outputbox");
+  gadgets.flash.embedFlash(url, outputbox, 7);
+  gadgets.window.adjustHeight();
+};
+ 
+function renderControls() {
+  var handle = document.getElementById("dom_handle");
+  var controls = document.createElement("div");
+  controls.appendChild(getButton("sit"));
+  controls.appendChild(getButton("spin"));
+  controls.appendChild(getButton("down"));
+  controls.appendChild(getButton("speak"));
+ 
+  var outputbox = document.createElement("div");
+  outputbox.id = "outputbox";
+  outputbox.style.width = "200px";
+  outputbox.style.height = "200px";
+ 
+  handle.innerHTML = "";
+  handle.appendChild(controls);
+  handle.appendChild(outputbox);
+ 
+  gadgets.window.adjustHeight();
+};
+ 
+function getButton(action) {
+  var control = document.createElement("button");
+  control.onclick = function() { doTrick(action); };
+  control.innerHTML = action;
+  return control;
+};
+ 
+gadgets.util.registerOnloadHandler(renderControls);
+</script>
+
+<input type="button" value="flash" onclick="renderControls()"/> 
+]]>
+</Content>
+</Module>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Nguyen Anh Kien
+ * nguyenanhkien2a@gmail.com
+-->
+<Module>
+<ModulePrefs title="Hello World"
+             height="250">
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+Hello World!
+]]>
+</Content>
+</Module>

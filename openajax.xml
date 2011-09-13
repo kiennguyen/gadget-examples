@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Hello OpenAjax">
+    <Require feature="org.openajax.hub-2.0.5" /> 
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[     
+       Hello, OpenAjax hub!
+    ]]>
+  </Content>
+</Module>

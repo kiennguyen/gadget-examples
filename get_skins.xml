@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Nguyen Anh Kien
+ * nguyenanhkien2a@gmail.com
+-->
+<Module>
+<ModulePrefs title="Skin demo" summary="" description="" author="Kien Nguyen" author_email="nguyenanhkien2a@gmail.com" thumbnail="" screenshot="" height="260">
+<Require feature="opensocial-0.7"/>
+<Require feature="views"/>
+<Require feature="dynamic-height"/>
+<Require feature="skins" />
+</ModulePrefs>
+<Content type="html">
+     <![CDATA[
+<script type="text/javascript">
+function init() {
+	var sContent = '<h4>gadgets.skins</h4>';
+	sContent += "BG_COLOR: "+gadgets.skins.getProperty(gadgets.skins.Property.BG_COLOR)+"<br>";
+	sContent += "ANCHOR_COLOR: "+gadgets.skins.getProperty(gadgets.skins.Property.ANCHOR_COLOR)+"<br>";
+	sContent += "BG_IMAGE: "+gadgets.skins.getProperty(gadgets.skins.Property.BG_IMAGE)+"<br>";
+	sContent += "FONT_COLOR: "+gadgets.skins.getProperty(gadgets.skins.Property.FONT_COLOR)+"<br>";
+	document.getElementById('content').innerHTML = sContent;
+}
+gadgets.util.registerOnLoadHandler(init);
+</script>
+<div id="content" style="width:380px;margin:10px auto;font-size: 80%">
+</div>
+	]]>
+</Content>
+</Module>
